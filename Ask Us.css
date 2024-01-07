@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("istockphoto-1283852667-612x612.jpg");
+  height: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+ul li {
+  position: relative;
+  margin: 0 10px;
+  list-style: none;
+  display: inline-block;
+  padding: 15px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul li a {
+  text-decoration: solid;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.nav a:hover {
+  color: rgb(191, 191, 191);
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 10px 10px 10px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 5%;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h3 {
+  text-align: center;
+  margin: 5%;
+  color: #196d22;
+  font-size: 20px;
+}
+
+/* Footer */
+.footer {
+  background: #196d22;
+  padding: 30px 0px;
+  font-family: 'Play', sans-serif;
+  text-align: center;
+}
+
+.footer .row1 {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: rgb(255, 255, 255);
+  font-size: 0.8em;
+}
+
+.footer .row1 a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  transition: 0.5s;
+}
+
+.footer .row1 a:hover {
+  color: #bababa;
+}
+
+.footer .row1 ul {
+  width: 100%;
+}
+
+.footer .row1 ul li {
+  display: inline-block;
+  margin: 0px 20px;
+  font-size: 1.2em;
+}
+
+.footer .row1 a i {
+  font-size: 2em;
+  margin: 0% 1%;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+      width: 100%;
+      margin: 0;
+  }
+
+  .bg{
+    width: 100%;
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+  }
+  
+  .nav img {
+    margin-bottom: 6px;
+    width: 100px;
+    height: 100px;
+    order: 1; /* Set the order to 1 to move it above nav ul */
+  }
+  
+  .nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    order: 2; /* Set the order to 2 to move it below the img */
+  }
+  
+  .nav ul li {
+    display: block;
+    margin-right: 5px; /* Adjust margin as needed */
+  }
+  
+  .nav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  h3{
+    font-size: 17px;
+    margin: 10%;
+  }
+
+  label, input::placeholder{
+    font-size: 14px;
+  }
+
+  .row1 ul {
+    display: grid;
+    grid-template-columns: 1fr; /* Display a single column */
+    padding: 0; /* Remove default padding */
+  }
+
+  .row1 ul li {
+    text-align: left; /* Center the text inside list items */
+    margin: 10px 0; /* Add spacing between list items */
+  }
+
+  .row1 ul li a{
+    font-size: 16px;
+  }
+
+  .row1 p{
+    font-size: 14px;
+    text-align: center; /* Center the text inside list items */
+    margin: 10px;
+  }
+
+  .row1 a i{
+    padding-right: 5%;
+    padding-bottom: 5%;
+  }
+
+  .col-25, .col-75 {
+    width: 100%;
+    padding: 1%;
+    margin-top: 0;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  body {
+    width: 100%;
+    margin: 0;
+}
+
+.bg{
+  width: 100%;
+}
+
+.nav {
+  text-align:center;
+  display: block;
+  flex-direction: row;
+  padding: 5px;
+}
+
+.nav img {
+  margin-right: 10px;
+  margin-bottom: 6px;
+  width: 100px;
+  height: 100px;
+}
+
+.nav ul {
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.nav ul li {
+  display: block;
+  margin-right: 2px;
+  align-items: center;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+h3{
+  font-size: 18px;
+  margin: 8%;
+}
+
+label, input::placeholder{
+  font-size: 14px;
+}
+
+.row1 ul {
+  justify-content: center;
+  display: flex;
+  flex-direction: row; /* Display a single column */
+  padding: 0; /* Remove default padding */
+}
+
+.row1 ul li {
+  text-align: center; /* Center the text inside list items */
+  margin: 10px 0; /* Add spacing between list items */
+}
+
+.row1 ul li a{
+  font-size: 16px;
+}
+
+.row1 p{
+  font-size: 14px;
+  text-align: center; /* Center the text inside list items */
+  margin: 10px;
+}
+
+.row1 a i{
+  font-size: 2em;
+  margin: 0% 1%;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-left: 10%;
+  margin-right: 10%
+}
+
+.col-25 {
+  width: 100%;
+  float:left;
+  width: 20%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  width: 100%;
+  float: left;
+  width: 80%;
+  margin-top: 6px;
+}
+
+input[type=submit] {
+  width: 80%;
+  margin-top: 0;
+}
+}
+
+@media screen and (min-width: 1025px) {
+  body {
+      width: 100%;
+      margin: 0;
+  }
+
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-left: 10%;
+    margin-right: 10%
+  }
+
+  .col-25 {
+    width: 100%;
+    float:left;
+    width: 20%;
+    margin-top: 6px;
+    text-align: center;
+  }
+
+  .rowbtn{
+    margin-right: 50px;
+  }
+}
